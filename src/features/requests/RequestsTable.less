@@ -1,0 +1,47 @@
+.requestsGrid {
+  --rowAlt: rgba(0, 0, 0, 0.015);
+  --rowHover: rgba(0, 0, 0, 0.04);
+
+  &__row--even {
+    background: var(--rowAlt);
+  }
+
+  .MuiDataGrid-row:hover {
+    background: var(--rowHover);
+  }
+
+  .MuiDataGrid-cell,
+  .MuiDataGrid-columnHeader {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .MuiDataGrid-cell .MuiTypography-root,
+  .MuiDataGrid-columnHeader .MuiTypography-root {
+    line-height: 1.2;
+  }
+
+  &__pin {
+    position: sticky;
+    left: 0;
+    z-index: 20;
+    background: #fff;
+    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.08);
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .MuiDataGrid-columnHeaders &__pin {
+    z-index: 21;
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  &__row--even &__pin {
+    background: var(--rowAlt);
+  }
+
+  .MuiDataGrid-row:hover &__pin {
+    background: var(--rowHover);
+  }
+}
