@@ -6,3 +6,11 @@
 npm i
 npm run dev
 ```
+
+## Стек
+
+React + TypeScript
+
+## Дизайн система
+
+MUI
